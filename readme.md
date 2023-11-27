@@ -64,6 +64,9 @@ plt.show()
 # Step 4: Convert into tokens
 token = word_tokenize(cleaned_text, "english")
 
+
 # Step 5: Remove stopwords
 final_word = [word for word in token if word not in stopwords.words('english')]
 ```
+'''python 
+plt.bar(x_values, y_values, color='skyblue')
