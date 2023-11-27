@@ -69,4 +69,4 @@ token = word_tokenize(cleaned_text, "english")
 final_word = [word for word in token if word not in stopwords.words('english')]
 ```
 '''python 
-plt.bar(x_values, y_values, color='skyblue')
+
