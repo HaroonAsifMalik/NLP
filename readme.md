@@ -64,9 +64,103 @@ plt.show()
 # Step 4: Convert into tokens
 token = word_tokenize(cleaned_text, "english")
 
-
 # Step 5: Remove stopwords
 final_word = [word for word in token if word not in stopwords.words('english')]
 ```
-'''python 
 
+Customization
+Color Customization
+
+You can customize the color of the bars using the color parameter. For example:
+
+```python
+plt.bar(x_values, y_values, color='skyblue')
+```
+
+Bar Width
+
+Adjust the width of the bars using the width parameter:
+
+```python
+
+plt.bar(x_values, y_values, width=0.5)
+```
+
+Labels and Title
+
+Add labels to the x-axis, y-axis, and a title to the plot for better clarity:
+
+```python
+
+plt.xlabel('X-axis Label')
+plt.ylabel('Y-axis Label')
+plt.title('Bar Chart Title')
+```
+
+Legend
+
+If you have multiple sets of data, you can add a legend:
+
+```python
+
+plt.bar(x1, y1, label='Data 1')
+plt.bar(x2, y2, label='Data 2')
+plt.legend()
+```
+
+Grid
+
+Add a grid to make it easier to read values from the plot:
+
+```python
+
+plt.grid(True, axis='y', linestyle='--', alpha=0.7)
+```
+
+Annotations
+
+Annotate specific bars with additional information:
+
+```python
+
+plt.annotate('Max Value', xy=(max_x, max_y), xytext=(max_x, max_y + 5), arrowprops=dict(facecolor='red', shrink=0.05))
+```
+
+Horizontal Bar Chart
+
+If you prefer horizontal bars:
+
+```python
+
+plt.barh(y_values, x_values)
+```
+
+Stacked Bar Charts
+
+Create stacked bar charts for visualizing the contribution of each category:
+
+```python
+
+plt.bar(x_values, y1, label='Category 1')
+plt.bar(x_values, y2, bottom=y1, label='Category 2')
+plt.legend()
+```
+
+Error Bars
+
+If you have error information, you can add error bars:
+
+```python
+
+plt.bar(x_values, y_values, yerr=error_values, capsize=5)
+```
+
+Bar Labels
+
+Display the values on top of each bar:
+
+```python
+
+for i, value in enumerate(y_values):
+    plt.text(i, value + 0.1, str(value), ha='center')
+```
